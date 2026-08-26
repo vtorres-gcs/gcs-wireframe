@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCS Wireframes — Navigable Prototype</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  a { color: inherit; text-decoration: none; }
+  body {
+    background: #e8eaf2;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1a1a2e;
+    padding: 48px 24px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    color: #000957;
+    margin-bottom: 8px;
+  }
+  .sub { color: #6b7280; font-size: 14px; margin-bottom: 40px; }
+  .group { margin-bottom: 36px; }
+  .group-title {
+    font-size: 11px; font-weight: 700; letter-spacing: .6px;
+    text-transform: uppercase; color: #3F8CFF;
+    margin-bottom: 12px;
+  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e4e8f4;
+    padding: 18px;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: #3F8CFF; transform: translateY(-2px); }
+  .card-flag { font-size: 22px; margin-bottom: 8px; }
+  .card-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+  .card-slug { font-size: 11px; color: #9ca3af; font-family: 'JetBrains Mono', monospace; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>GCS Wireframes</h1>
+  <div class="sub">Navigable prototype — listing pages and the Malta example detail pages link to each other.</div>
+
+  <div class="group">
+    <div class="group-title">Listing Pages</div>
+    <div class="cards">
+      <a class="card" href="wireframe-citizenship-page.html">
+        <div class="card-flag">⭐</div>
+        <div class="card-title">Citizenship</div>
+        <div class="card-slug">/citizenship</div>
+      </a>
+      <a class="card" href="wireframe-residency-page.html">
+        <div class="card-flag">🏠</div>
+        <div class="card-title">Residency</div>
+        <div class="card-slug">/residency</div>
+      </a>
+      <a class="card" href="wireframe-countries-page.html">
+        <div class="card-flag">🗺️</div>
+        <div class="card-title">Countries</div>
+        <div class="card-slug">/countries</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Malta — Detail Pages (example)</div>
+    <div class="cards">
+      <a class="card" href="wireframe-citizenship-malta.html">
+        <div class="card-flag">🇲🇹</div>
+        <div class="card-title">Malta Citizenship by Merit</div>
+        <div class="card-slug">/citizenship/malta</div>
+      </a>
+      <a class="card" href="wireframe-residency-malta.html">
+        <div class="card-flag">🇲🇹</div>
+        <div class="card-title">Malta Residency (MPRP)</div>
+        <div class="card-slug">/residency/malta</div>
+      </a>
+      <a class="card" href="wireframe-country-malta.html">
+        <div class="card-flag">🇲🇹</div>
+        <div class="card-title">Malta Country Page</div>
+        <div class="card-slug">/country/malta</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Sitemaps (reference)</div>
+    <div class="cards">
+      <a class="card" href="sitemap/Citizenship — Page Sitemap.html">
+        <div class="card-title">Citizenship — Page Sitemap</div>
+      </a>
+      <a class="card" href="sitemap/Country Pages — Sitemap.html">
+        <div class="card-title">Country Pages — Sitemap</div>
+      </a>
+      <a class="card" href="sitemap/RCBI_Residency_Sitemap.html">
+        <div class="card-title">RCBI Residency Sitemap</div>
+      </a>
+      <a class="card" href="sitemap/RCBI New Site Structure — Sitemap.html">
+        <div class="card-title">RCBI New Site Structure</div>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
