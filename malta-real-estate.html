@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Residency — Malta</title>
+<title>Real Estate — Malta</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   a { color: inherit; text-decoration: none; cursor: pointer; }
@@ -21,7 +21,6 @@
     --wire:       #c5cce0;
     --wire-dk:    #a0aabb;
     --label:      #6b7280;
-    --green:      #10b981;
     --font-serif: Georgia, 'Times New Roman', serif;
     --font-sans:  'Segoe UI', system-ui, sans-serif;
   }
@@ -51,11 +50,11 @@
   .nav-logo svg{height: 34px; width: auto; display: block;}
   .nav-links { display: flex; gap: 32px; flex: 1; align-items: center; }
   .nav-link { font-size: 13px; font-weight: 600; color: var(--night); cursor: default; display: flex; align-items: center; gap: 4px; }
-  .nav-link.active { font-weight: 800; color: var(--green); }
+  .nav-link.active { font-weight: 800; color: var(--electric); }
   .nav-link.has-caret:after { content: '⌄'; font-size: 11px; color: var(--night); }
   .nav-cta { background: var(--night); color: #fff; font-size: 11px; font-weight: 700; padding: 16px 26px; letter-spacing: .5px; text-transform: uppercase; cursor: default; flex-shrink: 0; }
 
-  /* ══ HERO — split layout (same as /citizenship) ══ */
+  /* ══ HERO — split layout (same as /citizenship, /residency) ══ */
   .hero {
     background: #fff;
     border-bottom: 1px solid var(--mid);
@@ -76,18 +75,13 @@
   .hero-flag { width: 32px; height: 22px; position: relative; overflow: hidden; flex-shrink: 0; border: 1px solid var(--mid); }
   .hero-flag-l { position: absolute; left: 0; top: 0; width: 50%; height: 100%; background: #fff; }
   .hero-flag-r { position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: #c8102e; }
-  .hero-type { font-size: 10px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 1.2px; }
+  .hero-type { font-size: 10px; font-weight: 800; color: var(--electric); text-transform: uppercase; letter-spacing: 1.2px; }
   .hero-title { font-family: var(--font-serif); font-size: 42px; font-weight: 700; color: var(--night); line-height: 1.1; letter-spacing: -.5px; }
-  .hero-title em { font-style: normal; color: var(--green); }
+  .hero-title em { font-style: normal; color: var(--electric); }
   .hero-subtitle { font-size: 14px; color: var(--label); line-height: 1.65; max-width: 480px; }
   .hero-stats { display: flex; gap: 32px; margin-top: 8px; }
-  .hero-stat-num { font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--green); }
+  .hero-stat-num { font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--electric); }
   .hero-stat-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; margin-top: 2px; }
-  .btn { font-size: 12px; font-weight: 700; padding: 12px 24px; display: inline-block; cursor: default; letter-spacing: .3px; }
-  .btn-green  { background: var(--green); color: #fff; }
-  .btn-ghost  { background: transparent; border: 2px solid var(--mid); color: var(--night); }
-  .btn-dark   { background: var(--night); color: #fff; }
-  .btn-white  { background: #fff; color: var(--night); }
   .hero-image { position: relative; }
   .hero-image .wire-img { width: 100%; height: 100%; background: var(--wire); color: var(--wire-dk); font-size: 11px; }
   .hero-image-label {
@@ -107,21 +101,22 @@
     font-size: 12px; font-weight: 600; color: rgba(255,255,255,.5);
     padding: 24px 28px; border-bottom: 3px solid transparent;
     cursor: default; display: flex; align-items: center; gap: 7px;
+    white-space: nowrap;
   }
-  .inav-item.active { color: #fff; border-bottom-color: var(--green); }
+  .inav-item.active { color: #fff; border-bottom-color: var(--electric); }
   .inav-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.25); }
-  .inav-item.active .inav-dot { background: var(--green); }
+  .inav-item.active .inav-dot { background: var(--electric); }
   .inav-sep { width: 1px; background: rgba(255,255,255,.12); margin: 14px 0; }
 
   /* ══ SECTIONS ══ */
   .section { padding: 64px 48px; border-bottom: 1px solid var(--mid); }
   .section.alt { background: var(--off); }
   .eyebrow {
-    font-size: 10px; font-weight: 800; color: var(--green);
+    font-size: 10px; font-weight: 800; color: var(--electric);
     text-transform: uppercase; letter-spacing: 1.2px;
     margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
   }
-  .eyebrow::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--green); }
+  .eyebrow::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--electric); }
   .section-title {
     font-family: var(--font-serif);
     font-size: 34px; font-weight: 700; color: var(--night);
@@ -138,20 +133,44 @@
     font-family: var(--font-serif);
     font-size: 20px; font-weight: 700; color: var(--night);
     line-height: 1.4; margin-bottom: 22px;
-    border-left: 3px solid var(--green); padding-left: 20px;
+    border-left: 3px solid var(--electric); padding-left: 20px;
   }
   .overview-aside { display: flex; flex-direction: column; gap: 16px; }
   .aside-img { height: 200px; }
 
-  /* key stats card */
   .stats-card { background: var(--night); padding: 22px 20px; display: flex; flex-direction: column; gap: 12px; }
   .stats-card-title { font-size: 11px; font-weight: 800; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 2px; }
   .stat-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.08); }
   .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
   .stat-key { font-size: 10px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .4px; }
-  .stat-val { font-size: 12px; font-weight: 700; color: var(--green); }
+  .stat-val { font-size: 12px; font-weight: 700; color: var(--electric); }
 
-  /* ══ ② BENEFITS ══ */
+  /* ══ ② PROPERTY LISTINGS ══ */
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px; margin-top: 36px;
+  }
+  .gallery-card { cursor: default; }
+  .gallery-card-img { height: 160px; position: relative; }
+  .gallery-card-img .wire-img { width: 100%; height: 100%; }
+  .gallery-badges { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; }
+  .gbadge { font-size: 9px; font-weight: 700; padding: 4px 9px; border-radius: 3px; letter-spacing: .3px; text-transform: uppercase; }
+  .gbadge-featured { background: var(--electric); color: #fff; }
+  .gbadge-sale { background: var(--night); color: #fff; }
+  .gbadge-rent { background: rgba(0,9,87,.7); color: #fff; }
+  .gallery-card-body { padding: 14px 2px 0; }
+  .gallery-card-title { font-size: 14px; font-weight: 800; color: var(--night); margin-bottom: 6px; }
+  .gallery-card-row { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--mid); margin-bottom: 12px; }
+  .gallery-card-price { font-size: 13px; font-weight: 700; color: var(--night); }
+  .gallery-card-price del { font-weight: 400; color: var(--muted); margin-right: 6px; }
+  .gallery-card-views { color: var(--wire-dk); font-size: 13px; }
+  .gallery-meta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .gallery-meta-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--label); }
+  .gallery-meta-item .gicon { font-size: 12px; }
+  .gallery-more { text-align: center; margin-top: 32px; }
+  .gallery-more-link { display: inline-block; font-size: 12px; font-weight: 700; color: var(--electric); border: 1px solid var(--mid); padding: 12px 28px; cursor: default; }
+
+  /* ══ ③ PROPERTY TYPES ══ */
   .benefits-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 1px; background: var(--mid); border: 1px solid var(--mid); margin-top: 36px;
@@ -164,7 +183,7 @@
   .benefit-desc { font-size: 11px; color: var(--label); line-height: 1.65; }
   .benefit-card.dark .benefit-desc { color: rgba(255,255,255,.55); }
 
-  /* ══ ③ REQUIREMENTS ══ */
+  /* ══ ④ INVESTMENT ROUTES ══ */
   .req-layout {
     display: grid; grid-template-columns: 1fr 340px;
     gap: 48px; margin-top: 36px; align-items: start;
@@ -182,87 +201,52 @@
   .req-title { font-size: 13px; font-weight: 700; color: var(--night); margin-bottom: 4px; }
   .req-desc  { font-size: 11px; color: var(--label); line-height: 1.6; }
 
-  /* eligibility card */
   .elig-card { background: var(--night); padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; }
   .elig-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px; }
   .elig-row { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.08); gap: 12px; }
   .elig-row:last-of-type { border-bottom: none; padding-bottom: 0; }
   .elig-key { font-size: 10px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .4px; flex-shrink: 0; }
-  .elig-val { font-size: 12px; font-weight: 700; color: var(--green); text-align: right; }
-  .elig-cta {
-    background: var(--green); color: #fff;
-    font-size: 11px; font-weight: 700; padding: 11px 16px;
-    text-align: center; cursor: default; margin-top: 4px;
-  }
+  .elig-val { font-size: 12px; font-weight: 700; color: var(--electric); text-align: right; }
 
-  /* ══ ④ PROCEDURE ══ */
-  .procedure-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 0; margin-top: 36px;
-    border: 1px solid var(--mid); background: var(--mid);
+  /* ══ PROGRAMME CARDS ══ */
+  .programmes-strip { background: var(--off); border-top: 1px solid var(--mid); border-bottom: 1px solid var(--mid); padding: 48px; }
+  .programmes-title { font-family: var(--font-serif); font-size: 24px; font-weight: 700; color: var(--night); margin-bottom: 24px; }
+  .programmes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .prog-card { background: #fff; border: 1px solid var(--mid); padding: 24px 24px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .prog-card-top { display: flex; align-items: center; gap: 10px; }
+  .prog-card-icon { font-size: 20px; }
+  .prog-card-name { font-size: 14px; font-weight: 800; color: var(--night); }
+  .prog-card-tag { margin-left: auto; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .tag-merit { background: #fef3c7; color: #92400e; }
+  .tag-rbi   { background: #d1fae5; color: #065f46; }
+  .prog-card-desc { font-size: 11px; color: var(--label); line-height: 1.6; }
+  .prog-card-from { font-size: 11px; font-weight: 700; color: var(--electric); }
+  .prog-card-cta {
+    display: inline-block; margin-top: 4px;
+    background: var(--night); color: #fff;
+    font-size: 11px; font-weight: 700; padding: 10px 18px;
+    cursor: pointer; align-self: flex-start; text-decoration: none;
   }
-  .proc-step { background: #fff; padding: 28px 22px; position: relative; }
-  .proc-step::after {
-    content: '→'; position: absolute; right: -11px; top: 50%;
-    transform: translateY(-50%);
-    color: var(--green); font-size: 18px; font-weight: 700; z-index: 2;
-  }
-  .proc-step:last-child::after { display: none; }
-  .proc-step-num { font-family: var(--font-serif); font-size: 36px; font-weight: 700; color: var(--mid); line-height: 1; margin-bottom: 12px; }
-  .proc-step-title { font-size: 13px; font-weight: 800; color: var(--night); margin-bottom: 8px; line-height: 1.3; }
-  .proc-step-desc  { font-size: 11px; color: var(--label); line-height: 1.6; }
-  .proc-step.active { background: var(--night); }
-  .proc-step.active .proc-step-num   { color: rgba(255,255,255,.12); }
-  .proc-step.active .proc-step-title { color: #fff; }
-  .proc-step.active .proc-step-desc  { color: rgba(255,255,255,.5); }
-
-  /* timeline label below steps */
-  .proc-timeline {
-    display: flex; margin-top: 12px;
-  }
-  .proc-timeline-item {
-    flex: 1; text-align: center;
-    font-size: 10px; color: var(--muted); font-weight: 600;
-    text-transform: uppercase; letter-spacing: .5px;
-    padding-top: 8px; border-top: 2px solid var(--mid);
-  }
-  .proc-timeline-item.active { border-top-color: var(--green); color: var(--night); }
 
   /* ══ CTA STRIP ══ */
   .cta-strip {
-    background: var(--green); padding: 48px;
+    background: var(--electric); padding: 48px;
     display: flex; align-items: center; justify-content: space-between; gap: 24px;
   }
   .cta-strip-title { font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-  .cta-strip-sub { font-size: 13px; color: rgba(255,255,255,.75); }
+  .cta-strip-sub { font-size: 13px; color: rgba(255,255,255,.7); }
   .cta-strip-actions { display: flex; gap: 12px; flex-shrink: 0; }
   .cta-btn-white { background: #fff; color: var(--night); font-size: 13px; font-weight: 700; padding: 14px 28px; cursor: default; }
   .cta-btn-ghost { background: transparent; border: 2px solid rgba(255,255,255,.45); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; cursor: default; }
 
-  /* ══ COMPARISON TABLE ══ */
-  .compare-table { width: 100%; border-collapse: collapse; margin-top: 36px; font-size: 12px; }
-  .compare-table th {
-    background: var(--night); color: #fff; padding: 12px 16px;
-    text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .3px;
-  }
-  .compare-table th:first-child { width: 200px; }
-  .compare-table th.active-col { background: var(--green); }
-  .compare-table td { padding: 12px 16px; border-bottom: 1px solid var(--mid); color: var(--label); }
-  .compare-table td.active-col { background: rgba(16,185,129,.06); font-weight: 600; color: var(--night); }
-  .compare-table tr:last-child td { border-bottom: none; }
-  .compare-table .row-label { font-weight: 700; color: var(--night); }
-  .check { color: var(--green); font-weight: 800; }
-  .cross { color: var(--muted); }
-
-  /* ══ RELATED PROGRAMS ══ */
-  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  /* ══ RELATED ══ */
+  .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
   .rel-card { border: 1px solid var(--mid); overflow: hidden; cursor: default; }
   .rel-card-img { height: 110px; }
-  .rel-card-body { padding: 14px 16px; }
-  .rel-card-name { font-size: 12px; font-weight: 700; color: var(--night); margin-bottom: 4px; }
-  .rel-card-prog { font-size: 10px; color: var(--muted); margin-bottom: 10px; }
-  .rel-card-from { font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
-  .rel-card-link { font-size: 11px; font-weight: 700; color: var(--electric); }
+  .rel-card-body { padding: 12px 14px; }
+  .rel-card-name { font-size: 12px; font-weight: 700; color: var(--night); margin-bottom: 3px; }
+  .rel-card-tag { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+  .rel-card-link { font-size: 11px; font-weight: 700; color: var(--electric); margin-top: 8px; display: block; }
 
   /* ══ LATEST ARTICLES ══ */
   .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
@@ -284,8 +268,6 @@
   .footer-col-title { font-size: 10px; font-weight: 800; color: rgba(255,255,255,.35); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 12px; }
   .footer-link { font-size: 11px; color: rgba(255,255,255,.4); margin-bottom: 8px; cursor: default; }
   .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,.2); }
-
-  /* ══ ANNOTATION PANEL ══ */
 </style>
 </head>
 <body>
@@ -331,8 +313,8 @@
 </svg>
       </a>
       <div class="nav-links">
-        <a class="nav-link" href="countries.html">Countries</a>
-        <a class="nav-link active" href="residency.html">Residency</a>
+        <a class="nav-link active" href="countries.html">Countries</a>
+        <a class="nav-link" href="residency.html">Residency</a>
         <a class="nav-link" href="citizenship.html">Citizenship</a>
         <div class="nav-link has-caret">Services</div>
         <div class="nav-link has-caret">Intelligence</div>
@@ -345,58 +327,58 @@
     <div class="hero">
       <div class="hero-content">
         <div class="hero-breadcrumb">
-          <a href="index.html">Home</a> <span class="hbc-sep">/</span> <a href="residency.html">Residency</a> <span class="hbc-sep">/</span> <span class="hbc-current">Malta Permanent Residence Programme</span>
+          <a href="index.html">Home</a> <span class="hbc-sep">/</span> <a href="countries.html">Countries</a> <span class="hbc-sep">/</span> <a href="country-malta.html">Malta</a> <span class="hbc-sep">/</span> <span class="hbc-current">Real Estate</span>
         </div>
         <div class="hero-eyebrow">
           <div class="hero-flag">
             <div class="hero-flag-l"></div>
             <div class="hero-flag-r"></div>
           </div>
-          <span class="hero-type">EU Residency · Golden Visa</span>
+          <span class="hero-type">Malta Real Estate</span>
         </div>
-        <div class="hero-title">Malta<br><em>Residency</em><br>by Investment</div>
-        <div class="hero-subtitle">The Malta Permanent Residence Programme (MPRP) grants non-EU nationals and their families permanent residency in Malta, with full Schengen access and a clear pathway to long-term EU establishment.</div>
+        <div class="hero-title">Malta<br><em>Real Estate</em><br>Investment</div>
+        <div class="hero-subtitle">Malta's property market underpins both the Citizenship by Merit Framework and the Malta Permanent Residency Programme, offering qualifying real estate routes across Malta, Gozo and the South of Malta.</div>
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-num">EUR 169k</div>
-            <div class="hero-stat-lbl">Starting from</div>
+            <div class="hero-stat-num">EUR 375k</div>
+            <div class="hero-stat-lbl">Min. purchase (Malta)</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-num">4–6</div>
-            <div class="hero-stat-lbl">Months process</div>
+            <div class="hero-stat-num">EUR 300k</div>
+            <div class="hero-stat-lbl">Min. purchase (Gozo/South)</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-num">Lifetime</div>
-            <div class="hero-stat-lbl">Permanent status</div>
+            <div class="hero-stat-num">EUR 14k</div>
+            <div class="hero-stat-lbl">Min. annual rent</div>
           </div>
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/img/Malta-1.png" alt="Grand Harbour, Valletta" style="width:100%;height:100%;object-fit:cover;display:block;">
-        <div class="hero-image-label">Grand Harbour, Valletta</div>
+        <img src="assets/img/Malta-1.png" alt="Sliema seafront, Malta" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="hero-image-label">Sliema seafront, Malta</div>
       </div>
     </div>
 
-    <!-- INTERNAL NAV — Malta Permanent Residency Programme is ACTIVE -->
+    <!-- INTERNAL NAV — Malta Real Estate is ACTIVE -->
     <div class="internal-nav">
       <a class="inav-item" href="country-malta.html"><div class="inav-dot"></div> About the Country</a>
       <div class="inav-sep"></div>
-      <a class="inav-item active" href="residency-malta.html"><div class="inav-dot"></div> Permanent Residency Programme</a>
+      <a class="inav-item" href="residency-malta.html"><div class="inav-dot"></div> Permanent Residency Programme</a>
       <div class="inav-sep"></div>
       <a class="inav-item" href="citizenship-malta.html"><div class="inav-dot"></div> Citizenship by Merit Framework</a>
       <div class="inav-sep"></div>
-      <a class="inav-item" href="malta-real-estate.html"><div class="inav-dot"></div> Real Estate</a>
+      <a class="inav-item active" href="malta-real-estate.html"><div class="inav-dot"></div> Real Estate</a>
     </div>
 
     <!-- ① OVERVIEW -->
     <section class="section" id="overview">
-      <div class="eyebrow">01 — Overview of Residency</div>
-      <div class="section-title">Overview of Malta<br>Residency by Investment</div>
+      <div class="eyebrow">01 — Overview of the Property Market</div>
+      <div class="section-title">Overview of Malta<br>Real Estate</div>
 
       <div class="overview-layout">
         <div>
           <div class="overview-pull">
-            The MPRP is Malta's flagship residence-by-investment programme, offering a permanent, transferable status with no minimum stay requirement.
+            Malta's property market combines EU-regulated ownership rights with a limited island supply, making qualifying real estate central to both of Malta's investment migration routes.
           </div>
           <div class="wire-text w-100"></div>
           <div class="wire-text w-100"></div>
@@ -411,24 +393,200 @@
         </div>
 
         <div class="overview-aside">
-          <div class="wire-img aside-img">Malta residency image</div>
+          <div class="wire-img aside-img">Malta property image</div>
           <div class="stats-card">
-            <div class="stats-card-title">Programme details</div>
-            <div class="stat-row"><div class="stat-key">Programme</div><div class="stat-val">MPRP</div></div>
-            <div class="stat-row"><div class="stat-key">Min. investment</div><div class="stat-val">EUR 169,000</div></div>
-            <div class="stat-row"><div class="stat-key">Status</div><div class="stat-val">Permanent</div></div>
-            <div class="stat-row"><div class="stat-key">Processing</div><div class="stat-val">4–6 months</div></div>
-            <div class="stat-row"><div class="stat-key">Min. stay</div><div class="stat-val">None required</div></div>
-            <div class="stat-row"><div class="stat-key">Schengen access</div><div class="stat-val">✓ Yes</div></div>
+            <div class="stats-card-title">Market snapshot</div>
+            <div class="stat-row"><div class="stat-key">Purchase (Malta)</div><div class="stat-val">from EUR 375,000</div></div>
+            <div class="stat-row"><div class="stat-key">Purchase (Gozo/South)</div><div class="stat-val">from EUR 300,000</div></div>
+            <div class="stat-row"><div class="stat-key">Rental (Malta)</div><div class="stat-val">from EUR 14,000/yr</div></div>
+            <div class="stat-row"><div class="stat-key">Rental (Gozo/South)</div><div class="stat-val">from EUR 10,000/yr</div></div>
+            <div class="stat-row"><div class="stat-key">Ownership</div><div class="stat-val">Freehold</div></div>
+            <div class="stat-row"><div class="stat-key">Holding period</div><div class="stat-val">5 years min.</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ② BENEFITS -->
-    <section class="section alt" id="benefits">
-      <div class="eyebrow">02 — Benefits</div>
-      <div class="section-title">Benefits of Malta<br>Residency by Investment</div>
+    <!-- ② PROPERTY LISTINGS -->
+    <section class="section" id="listings">
+      <div class="eyebrow">02 — Property Listings</div>
+      <div class="section-title">Featured Malta<br>Properties</div>
+      <div class="section-body">
+        <div class="wire-text w-100"></div>
+        <div class="wire-text w-65"></div>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Townhouse — Valletta</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-featured">Featured</span><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Restored Townhouse in Valletta</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 450,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>4</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>3</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>1750</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Apartment — Sliema</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Seafront Apartment in Sliema</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 375,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>2019</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Villa — St Julian's</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-featured">Featured</span><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">New-Build Villa in St Julian's</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 620,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>5</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>4</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>2021</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Apartment — Gzira</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-rent">For Rent</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Waterfront Apartment in Gzira</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 14,000/yr</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>3</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>2016</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Farmhouse — Gozo</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Restored Farmhouse in Gozo</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 300,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>3</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>1890</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Penthouse — Sliema</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-featured">Featured</span><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Penthouse with Terrace in Sliema</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price"><del>EUR 850,000</del> EUR 780,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>4</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>3</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>2020</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Townhouse — Mdina</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-sale">For Sale</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Historic Townhouse in Mdina</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 520,000</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>4</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>3</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>1650</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img">
+            <div class="wire-img" style="height:100%;">Marina Apt — Portomaso</div>
+            <div class="gallery-badges"><span class="gbadge gbadge-rent">For Rent</span></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="gallery-card-title">Marina Apartment in Portomaso</div>
+            <div class="gallery-card-row">
+              <div class="gallery-card-price">EUR 10,500/yr</div>
+              <div class="gallery-card-views">👁</div>
+            </div>
+            <div class="gallery-meta">
+              <div class="gallery-meta-item"><span class="gicon">🛏️</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🛁</span>2</div>
+              <div class="gallery-meta-item"><span class="gicon">🏗️</span>2015</div>
+              <div class="gallery-meta-item"><span class="gicon">🚗</span>1</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery-more"><div class="gallery-more-link">View all properties →</div></div>
+    </section>
+
+    <!-- ③ PROPERTY TYPES -->
+    <section class="section alt" id="property-types">
+      <div class="eyebrow">03 — Property Types</div>
+      <div class="section-title">Qualifying Property<br>Types in Malta</div>
       <div class="section-body">
         <div class="wire-text w-100"></div>
         <div class="wire-text w-75"></div>
@@ -436,42 +594,42 @@
 
       <div class="benefits-grid">
         <div class="benefit-card dark">
-          <div class="benefit-icon">🛂</div>
-          <div class="benefit-title">Schengen Zone Access</div>
-          <div class="benefit-desc">Travel freely across 27 Schengen countries without border controls or additional visas.</div>
+          <div class="benefit-icon">🏙️</div>
+          <div class="benefit-title">Sliema &amp; St Julian's Apartments</div>
+          <div class="benefit-desc">High-demand seafront and city apartments popular with international buyers and rental investors.</div>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">♾️</div>
-          <div class="benefit-title">Permanent Status</div>
-          <div class="benefit-desc">MPRP is granted for life with no renewal obligations and no minimum stay requirement.</div>
+          <div class="benefit-icon">🏘️</div>
+          <div class="benefit-title">Valletta Townhouses</div>
+          <div class="benefit-desc">Restored historic townhouses in the capital, many within UNESCO World Heritage boundaries.</div>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">👨‍👩‍👧‍👦</div>
-          <div class="benefit-title">Family Inclusion</div>
-          <div class="benefit-desc">Spouse, dependent children, and parents can all be included in a single application.</div>
+          <div class="benefit-icon">🏝️</div>
+          <div class="benefit-title">Gozo &amp; South Malta Property</div>
+          <div class="benefit-desc">Lower entry thresholds and a quieter lifestyle, qualifying at reduced MPRP investment levels.</div>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">💼</div>
-          <div class="benefit-title">Business & EU Access</div>
-          <div class="benefit-desc">Establish businesses in Malta with full access to the EU single market and regulatory framework.</div>
+          <div class="benefit-icon">🏗️</div>
+          <div class="benefit-title">New-Build Developments</div>
+          <div class="benefit-desc">Off-plan and newly completed developments with modern specifications and amenities.</div>
         </div>
         <div class="benefit-card dark">
-          <div class="benefit-icon">🏫</div>
-          <div class="benefit-title">Education & Healthcare</div>
-          <div class="benefit-desc">Access to Malta's public healthcare and educational institutions for the whole family.</div>
+          <div class="benefit-icon">⛵</div>
+          <div class="benefit-title">Waterfront &amp; Marina Property</div>
+          <div class="benefit-desc">Premium waterfront homes and marina-adjacent developments across Malta's harbour areas.</div>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <div class="benefit-title">Tax Planning</div>
-          <div class="benefit-desc">Malta's non-dom tax regime and competitive income tax rates offer significant planning opportunities for HNW individuals.</div>
+          <div class="benefit-icon">🏡</div>
+          <div class="benefit-title">Rental Portfolio</div>
+          <div class="benefit-desc">Qualifying long-term rental properties for applicants who prefer not to purchase outright.</div>
         </div>
       </div>
     </section>
 
-    <!-- ③ REQUIREMENTS -->
-    <section class="section" id="requirements">
-      <div class="eyebrow">03 — Requirements</div>
-      <div class="section-title">Requirements of Malta<br>Residency by Investment</div>
+    <!-- ④ INVESTMENT ROUTES -->
+    <section class="section" id="routes">
+      <div class="eyebrow">04 — Investment Routes</div>
+      <div class="section-title">Real Estate Routes Linked<br>to Malta Programmes</div>
       <div class="section-body">
         <div class="wire-text w-100"></div>
         <div class="wire-text w-65"></div>
@@ -482,205 +640,129 @@
           <div class="req-item">
             <div class="req-num">1</div>
             <div>
-              <div class="req-title">Property purchase or rental</div>
-              <div class="req-desc">Purchase a qualifying property (min. EUR 375,000 in Malta or EUR 300,000 in Gozo/South) or rent (min. EUR 14,000/yr in Malta or EUR 10,000/yr in Gozo/South).</div>
+              <div class="req-title">MPRP qualifying purchase</div>
+              <div class="req-desc">Purchase a qualifying property (min. EUR 375,000 in Malta or EUR 300,000 in Gozo/South) to satisfy the Malta Permanent Residency Programme's property condition.</div>
             </div>
           </div>
           <div class="req-item">
             <div class="req-num">2</div>
             <div>
-              <div class="req-title">Government contribution</div>
-              <div class="req-desc">Non-refundable contribution of EUR 28,000 (purchase route) or EUR 58,000 (rental route) payable to the government.</div>
+              <div class="req-title">MPRP qualifying rental</div>
+              <div class="req-desc">Alternatively, rent a qualifying property (min. EUR 14,000/yr in Malta or EUR 10,000/yr in Gozo/South) for the duration of the holding period.</div>
             </div>
           </div>
           <div class="req-item">
             <div class="req-num">3</div>
             <div>
-              <div class="req-title">Philanthropic donation</div>
-              <div class="req-desc">EUR 2,000 donation to a registered Maltese NGO or philanthropic organisation.</div>
+              <div class="req-title">Minimum holding period</div>
+              <div class="req-desc">Qualifying property must be retained for a minimum of five years from the date the residency card is issued.</div>
             </div>
           </div>
           <div class="req-item">
             <div class="req-num">4</div>
             <div>
-              <div class="req-title">Clean criminal record</div>
-              <div class="req-desc">All adult applicants and dependants must present a clear police certificate from country of origin and all countries of long-term residence.</div>
+              <div class="req-title">Independent valuation</div>
+              <div class="req-desc">All qualifying property is subject to an independent valuation to confirm it meets the applicable investment threshold.</div>
             </div>
           </div>
           <div class="req-item">
             <div class="req-num">5</div>
             <div>
-              <div class="req-title">Health insurance</div>
-              <div class="req-desc">Valid health insurance covering Malta for all family members included in the application.</div>
-            </div>
-          </div>
-          <div class="req-item">
-            <div class="req-num">6</div>
-            <div>
-              <div class="req-title">Stable income</div>
-              <div class="req-desc">Proof of financial self-sufficiency — minimum annual income of EUR 100,000 from abroad, or EUR 500,000 in capital assets.</div>
+              <div class="req-title">Ownership structure</div>
+              <div class="req-desc">Property may be held individually or jointly with a spouse or civil partner included in the same application.</div>
             </div>
           </div>
         </div>
 
         <div class="elig-card">
-          <div class="elig-title">Eligibility at a glance</div>
-          <div class="elig-row"><div class="elig-key">Min. age</div><div class="elig-val">18 years</div></div>
-          <div class="elig-row"><div class="elig-key">Nationality</div><div class="elig-val">Non-EU / non-EEA</div></div>
-          <div class="elig-row"><div class="elig-key">Min. income</div><div class="elig-val">EUR 100k/yr</div></div>
-          <div class="elig-row"><div class="elig-key">Capital assets</div><div class="elig-val">EUR 500k+</div></div>
-          <div class="elig-row"><div class="elig-key">Contribution</div><div class="elig-val">EUR 28k–58k</div></div>
-          <div class="elig-row"><div class="elig-key">Property</div><div class="elig-val">Purchase or rent</div></div>
-          <div class="elig-row"><div class="elig-key">Due diligence</div><div class="elig-val">4-tier check</div></div>
-          <div class="elig-cta">Check my eligibility</div>
+          <div class="elig-title">Quick reference</div>
+          <div class="elig-row"><div class="elig-key">Purchase — Malta</div><div class="elig-val">EUR 375k+</div></div>
+          <div class="elig-row"><div class="elig-key">Purchase — Gozo/South</div><div class="elig-val">EUR 300k+</div></div>
+          <div class="elig-row"><div class="elig-key">Rental — Malta</div><div class="elig-val">EUR 14k/yr+</div></div>
+          <div class="elig-row"><div class="elig-key">Rental — Gozo/South</div><div class="elig-val">EUR 10k/yr+</div></div>
+          <div class="elig-row"><div class="elig-key">Holding period</div><div class="elig-val">5 years</div></div>
+          <div class="elig-row"><div class="elig-key">Linked programme</div><div class="elig-val">MPRP</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ④ PROCEDURE -->
-    <section class="section alt" id="procedure">
-      <div class="eyebrow">04 — Procedure</div>
-      <div class="section-title">Procedure for Malta<br>Residency by Investment</div>
-      <div class="section-body">
-        <div class="wire-text w-100"></div>
-        <div class="wire-text w-60"></div>
-      </div>
+    <!-- PROGRAMME CARDS — linkers to /citizenship/malta & /residency/malta -->
+    <div class="programmes-strip">
+      <div class="programmes-title">Malta Investment Programmes</div>
+      <div class="programmes-grid">
 
-      <div class="procedure-steps">
-        <div class="proc-step active">
-          <div class="proc-step-num">01</div>
-          <div class="proc-step-title">Eligibility & consultation</div>
-          <div class="proc-step-desc">GCS advisors assess your profile and confirm eligibility under the MPRP regulations.</div>
+        <div class="prog-card">
+          <div class="prog-card-top">
+            <div class="prog-card-icon">🏠</div>
+            <div class="prog-card-name">Malta Permanent Residency Programme</div>
+            <span class="prog-card-tag tag-rbi">RBI</span>
+          </div>
+          <div class="prog-card-desc">The MPRP grants permanent residency in Malta with full EU and Schengen access, through a qualifying property and government contribution.</div>
+          <div class="prog-card-from">from EUR 169,000</div>
+          <a class="prog-card-cta" href="residency-malta.html">Learn about Residency →</a>
         </div>
-        <div class="proc-step">
-          <div class="proc-step-num">02</div>
-          <div class="proc-step-title">Document preparation</div>
-          <div class="proc-step-desc">Compilation, certification, and apostille of all required personal and financial documents.</div>
-        </div>
-        <div class="proc-step">
-          <div class="proc-step-num">03</div>
-          <div class="proc-step-title">Application & due diligence</div>
-          <div class="proc-step-desc">Formal submission to Residency Malta Agency. 4-tier background check is conducted.</div>
-        </div>
-        <div class="proc-step">
-          <div class="proc-step-num">04</div>
-          <div class="proc-step-title">Approval & residency card</div>
-          <div class="proc-step-desc">Letter of approval issued. Investment completed and permanent residency card collected in Malta.</div>
-        </div>
-      </div>
 
-      <div class="proc-timeline">
-        <div class="proc-timeline-item active">Month 1</div>
-        <div class="proc-timeline-item">Month 2–3</div>
-        <div class="proc-timeline-item">Month 3–5</div>
-        <div class="proc-timeline-item">Month 4–6</div>
+        <div class="prog-card">
+          <div class="prog-card-top">
+            <div class="prog-card-icon">⭐</div>
+            <div class="prog-card-name">Citizenship by Merit Framework</div>
+            <span class="prog-card-tag tag-merit">Merit</span>
+          </div>
+          <div class="prog-card-desc">An exceptional-contribution pathway granting full EU citizenship, one of the most powerful passports in the world with visa-free access to 190+ countries.</div>
+          <div class="prog-card-from">No fixed public minimum</div>
+          <a class="prog-card-cta" href="citizenship-malta.html">Learn about Citizenship →</a>
+        </div>
+
       </div>
-    </section>
+    </div>
 
     <!-- CTA STRIP -->
     <div class="cta-strip">
       <div>
-        <div class="cta-strip-title">Ready to apply for Malta residency?</div>
-        <div class="cta-strip-sub">Our licensed advisors guide you from eligibility to residency card.</div>
+        <div class="cta-strip-title">Looking for property in Malta?</div>
+        <div class="cta-strip-sub">Speak to a GCS advisor about qualifying real estate for your programme.</div>
       </div>
       <div class="cta-strip-actions">
         <div class="cta-btn-white">Book a consultation</div>
-        <div class="cta-btn-ghost">Download MPRP brochure</div>
+        <div class="cta-btn-ghost">Download property guide</div>
       </div>
     </div>
 
-    <!-- COMPARISON TABLE -->
+    <!-- RELATED -->
     <section class="section">
-      <div class="eyebrow">Compare routes</div>
-      <div class="section-title">MPRP vs other EU<br>Residency Programmes</div>
-
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Programme</th>
-            <th class="active-col">Malta MPRP ✓</th>
-            <th>Portugal GV</th>
-            <th>Greece GV</th>
-            <th>Cyprus GV</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="row-label">Min. investment</td>
-            <td class="active-col">EUR 169k</td>
-            <td>EUR 250k</td>
-            <td>EUR 250k</td>
-            <td>EUR 300k</td>
-          </tr>
-          <tr>
-            <td class="row-label">Status type</td>
-            <td class="active-col">Permanent</td>
-            <td>Temporary (renewable)</td>
-            <td>Temporary (renewable)</td>
-            <td>Permanent</td>
-          </tr>
-          <tr>
-            <td class="row-label">Min. stay / yr</td>
-            <td class="active-col">None</td>
-            <td>14 days</td>
-            <td>None</td>
-            <td>None</td>
-          </tr>
-          <tr>
-            <td class="row-label">Schengen access</td>
-            <td class="active-col"><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td class="row-label">Processing time</td>
-            <td class="active-col">4–6 months</td>
-            <td>6–12 months</td>
-            <td>6–12 months</td>
-            <td>6–9 months</td>
-          </tr>
-          <tr>
-            <td class="row-label">Path to citizenship</td>
-            <td class="active-col"><span class="check">✓ Separate route</span></td>
-            <td><span class="check">✓ 5 yr naturalisation</span></td>
-            <td><span class="cross">—</span></td>
-            <td><span class="cross">—</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- RELATED PROGRAMMES -->
-    <section class="section alt">
-      <div class="eyebrow">Related programmes</div>
-      <div class="section-title">Other EU residency options</div>
+      <div class="eyebrow">Explore more</div>
+      <div class="section-title">Related programmes</div>
       <div class="related-grid">
         <div class="rel-card">
           <div class="wire-img rel-card-img">Image</div>
           <div class="rel-card-body">
+            <div class="rel-card-name">🇲🇹 About the Country</div>
+            <span class="rel-card-tag tag-rbi">Overview</span>
+            <div class="rel-card-link">Explore Malta →</div>
+          </div>
+        </div>
+        <div class="rel-card">
+          <div class="wire-img rel-card-img">Image</div>
+          <div class="rel-card-body">
+            <div class="rel-card-name">🇲🇹 Residency</div>
+            <span class="rel-card-tag tag-rbi">RBI</span>
+            <div class="rel-card-link">Explore MPRP →</div>
+          </div>
+        </div>
+        <div class="rel-card">
+          <div class="wire-img rel-card-img">Image</div>
+          <div class="rel-card-body">
+            <div class="rel-card-name">🇲🇹 Citizenship</div>
+            <span class="rel-card-tag tag-merit">Merit</span>
+            <div class="rel-card-link">Explore Citizenship →</div>
+          </div>
+        </div>
+        <div class="rel-card">
+          <div class="wire-img rel-card-img">Image</div>
+          <div class="rel-card-body">
             <div class="rel-card-name">🇵🇹 Portugal</div>
-            <div class="rel-card-prog">Golden Visa</div>
-            <div class="rel-card-from">from EUR 250,000</div>
-            <div class="rel-card-link">Learn more →</div>
-          </div>
-        </div>
-        <div class="rel-card">
-          <div class="wire-img rel-card-img">Image</div>
-          <div class="rel-card-body">
-            <div class="rel-card-name">🇬🇷 Greece</div>
-            <div class="rel-card-prog">Greek Golden Visa</div>
-            <div class="rel-card-from">from EUR 250,000</div>
-            <div class="rel-card-link">Learn more →</div>
-          </div>
-        </div>
-        <div class="rel-card">
-          <div class="wire-img rel-card-img">Image</div>
-          <div class="rel-card-body">
-            <div class="rel-card-name">🇨🇾 Cyprus</div>
-            <div class="rel-card-prog">Golden Visa</div>
-            <div class="rel-card-from">from EUR 300,000</div>
-            <div class="rel-card-link">Learn more →</div>
+            <span class="rel-card-tag tag-rbi">RBI</span>
+            <div class="rel-card-link">Explore Portugal →</div>
           </div>
         </div>
       </div>
@@ -688,18 +770,9 @@
 
     <!-- LATEST ARTICLES -->
     <section class="section">
-      <div class="eyebrow">From the blog</div>
+      <div class="eyebrow">Explore more</div>
       <div class="section-title">Latest articles</div>
       <div class="articles-grid">
-        <a class="article-card" href="malta-real-estate.html">
-          <div class="article-card-img wire-img">Blog image — Malta waterfront property</div>
-          <div class="article-card-body">
-            <div class="article-card-tag">Real Estate</div>
-            <div class="article-card-title">Malta Real Estate: A Guide For Foreign Buyers And Investors</div>
-            <div class="article-card-desc">What foreign buyers need to know about purchasing property in Malta, from AIP permits to prices by region.</div>
-            <div class="article-card-foot"><span class="article-card-date">August 2026</span><span class="article-card-link">Read more →</span></div>
-          </div>
-        </a>
         <a class="article-card" href="citizenship-malta.html">
           <div class="article-card-img wire-img">Blog image — Passport and boarding pass on a map</div>
           <div class="article-card-body">
@@ -707,6 +780,15 @@
             <div class="article-card-title">Second Citizenship By Investment: What Changed In 2026</div>
             <div class="article-card-desc">A round-up of programme updates, fee changes and due-diligence shifts across the leading citizenship-by-investment routes.</div>
             <div class="article-card-foot"><span class="article-card-date">July 2026</span><span class="article-card-link">Read more →</span></div>
+          </div>
+        </a>
+        <a class="article-card" href="residency-malta.html">
+          <div class="article-card-img wire-img">Blog image — Family reviewing documents with advisor</div>
+          <div class="article-card-body">
+            <div class="article-card-tag">Residency</div>
+            <div class="article-card-title">Golden Visa Vs. Residence By Investment: Choosing The Right Route</div>
+            <div class="article-card-desc">How the two most common residency-planning strategies differ in cost, timeline and long-term flexibility for families.</div>
+            <div class="article-card-foot"><span class="article-card-date">June 2026</span><span class="article-card-link">Read more →</span></div>
           </div>
         </a>
         <a class="article-card" href="blog-malta-mprp.html">
